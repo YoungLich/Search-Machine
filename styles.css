@@ -1,0 +1,184 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Estiliza o corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: #130e0e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    color: antiquewhite;
+    font-size: 1.7em;
+}
+
+/* Estiliza o contêiner que envolve o título e a imagem */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    gap: 1rem;
+    /* Espaçamento entre o título e a imagem */
+    margin-bottom: 2rem;
+    /* Espaçamento inferior */
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+    font-size: 2.5rem;
+    color: #d3bf10;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+/* Estiliza a imagem da luva */
+.img {
+    width: 130px;
+    /* Largura padrão da imagem */
+    margin-left: -20px;
+    /* Mantém a proporção da imagem */
+}
+
+/* Estiliza as seções da página */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+    width: 30rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    color: #45474B;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: #30475E;
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+    background-color: #54728f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagem-resultado {
+    width: 150px;
+    /* Define o tamanho fixo para todas as imagens */
+    height: 150px;
+    /* Define a altura fixa para uniformidade */
+    object-fit: cover;
+    /* Garante que a imagem se ajuste ao contêiner */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    display: block;
+    /* Faz com que o elemento se comporte como um bloco */
+    margin: 0 auto 15px auto;
+    /* Centraliza a imagem e adiciona espaçamento abaixo */
+}
+
+.item-resultado {
+    text-align: center;
+    /* Centraliza todo o conteúdo dentro de cada item */
+    margin: 0 auto;
+    /* Centraliza o item no contêiner pai */
+}
+
+a {
+    display: block;
+    /* Cada link ocupa uma nova linha */
+    margin: 5px 0;
+    /* Espaçamento entre os links */
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 60rem;
+    height: 46vh;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    text-align: center;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background: #FFFFFF;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    color: #222831;
+    /* Cor do texto */
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links */
+    color: #30475E;
+    /* Cor do texto dos links */
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #45474B;
+    /* Cor do texto */
+    margin: 0.5rem 0;
+    /* Margem acima e abaixo */
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #F5F7F8;
+    /* Cor de fundo do rodapé */
+    color: #45474B;
+    /* Cor do texto */
+    text-align: center;
+    /* Alinha o texto ao centro */
+    padding: 0;
+    /* Espaçamento interno */
+    width: 100%;
+    /* Largura total da página */
+    position: absolute;
+    /* Posiciona o rodapé */
+    bottom: 0;
+    /* Alinha ao fundo da página */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+}
