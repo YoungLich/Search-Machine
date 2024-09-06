@@ -35,7 +35,7 @@ let dadosCursos = [
         descricao: `
     Aprenda a trabalhar com dados. Do Excel ao Python e Machine Learning. Use os principais bancos SQL do mercado e faça análises de dados com business intelligence.
     <ul>
-        <li>Instrutor: Maria Oliveira</li>
+        <li>Instrutor: Alura</li>
         <li>Nível: Iniciante ao Intermediário</li>
         <li>Plataforma: Alura</li>
         <li>Preço: R$ 1.308,00 à vista</li>
@@ -43,7 +43,7 @@ let dadosCursos = [
         <li>Descrição: Domine as ferramentas de Python para analisar grandes volumes de dados e criar modelos preditivos. Pandas, SciKitLearn, Jupyter e mais.</li>
     </ul>
     `,
-        image: 'images/Cursos/Alira.jpg',
+        image: 'images/Cursos/Alura.jpg',
         links: ["https://www.alura.com.br/cursos-online-data-science?utm_term=curso%20data%20science&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Cursos+-+Campanha+Unificada&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=10211097486&hsa_grp=101231556686&hsa_ad=541776799108&hsa_src=g&hsa_tgt=aud-2201239030515:kwd-302801142910&hsa_kw=curso%20data%20science&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQjw0Oq2BhCCARIsAA5hubXHnafIX79Vmp-wilWu2wlo77uwCkNXOhp2VEhk5NbB1BX4g8LMwrgaAspKEALw_wcB"]
     },
     {
