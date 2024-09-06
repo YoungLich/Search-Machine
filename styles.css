@@ -1,130 +1,187 @@
-/* Importa a fonte Chakra Petch do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-/* Estiliza o corpo da página */
+/* Reset básico para garantir consistência */
+html,
 body {
-    font-family: "Chakra Petch", sans-serif;
-    background-color: #130e0e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-.text {
-    color: antiquewhite;
-    font-size: 1.7em;
-}
-
-/* Estiliza o contêiner que envolve o título e a imagem */
-.title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Centraliza o conteúdo horizontalmente */
-    gap: 1rem;
-    /* Espaçamento entre o título e a imagem */
-    margin-bottom: 1rem;
-    /* Espaçamento inferior */
-}
-
-/* Estiliza os títulos h1 */
-h1 {
-    font-size: 1.5rem;
-    color: #d3bf10;
-    text-align: center;
-    letter-spacing: 0.4rem;
-}
-
-/* Estiliza a imagem da luva */
-.img {
-    width: 100px;
-    /* Largura padrão da imagem */
-    margin-left: -20px;
-    /* Mantém a proporção da imagem */
-}
-
-/* Estiliza as seções da página */
-section {
+/* Corpo da página */
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background: linear-gradient(to top, #58a3ad, #07224b);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+}
+
+/* Tema de fundo específico */
+body.theme-games {
+    background: url('path/to/games-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.theme-recipes {
+    background: url('path/to/recipes-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.theme-courses {
+    background: url('path/to/courses-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.theme-books {
+    background: url('path/to/books-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Cabeçalho */
+header {
     margin-bottom: 3rem;
 }
 
-/* Estiliza os inputs dentro das seções */
-section input {
-    width: 30rem;
-    border: none;
-    padding: 1rem;
-    border-radius: 1.5rem;
-    margin-bottom: 1rem;
-    color: #45474B;
-    font-size: 1rem;
-    box-sizing: border-box;
+/* Estilo para o contêiner pai */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    /* Garantir que o main ocupe pelo menos 60% da altura da viewport */
 }
 
-/* Estiliza os botões dentro das seções */
-section button {
+/* Contêiner do título */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+/* Título */
+h1.title {
+    font-size: 2rem;
+    color: #000;
+    letter-spacing: 0.4rem;
+    margin: 0;
+    font-size: 2rem;
+    /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    /* Adicione negrito se desejar */
+    color: transparent;
+    /* Torne o texto transparente para que o gradiente seja visível */
+    background: linear-gradient(to right, #e9ae9f, #e2aa69, #ff961d);
+    /* Defina o gradiente linear desejado */
+    -webkit-background-clip: text;
+    /* Garante que o gradiente seja aplicado ao texto */
+    background-clip: text;
+    /* Garante compatibilidade com navegadores não WebKit */
+    text-align: center;
+    /* Centraliza o texto, se necessário */
+}
+
+/* Imagem do título */
+.img {
+    width: 70px;
+    margin-top: 1rem;
+}
+
+/* Container de escolha */
+.container_escolha {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    height: 250px;
+    max-width: 300px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* Opções dentro do container */
+.caixinha {
+    width: 70px;
+    padding: 10px;
+    font-size: 17px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.caixinha:hover {
+    background-color: black;
+    color: white;
+    border-color: wheat;
+}
+
+/* Pesquisa */
+.pesquisa {
+    display: none;
+    margin-top: 2rem;
+}
+
+.search-bar-visible {
+    display: block;
+}
+
+.pesquisa input {
+    width: 300px;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.pesquisa button {
     padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
     background-color: #30475E;
     color: #F5F7F8;
     font-size: 1rem;
     cursor: pointer;
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
-section button:hover {
+.pesquisa button:hover {
     background-color: #54728f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.imagem-resultado {
-    width: 150px;
-    /* Define o tamanho fixo para todas as imagens */
-    height: 150px;
-    /* Define a altura fixa para uniformidade */
-    object-fit: cover;
-    /* Garante que a imagem se ajuste ao contêiner */
-    border-radius: 8px;
-    /* Bordas arredondadas */
-    display: block;
-    /* Faz com que o elemento se comporte como um bloco */
-    margin: 0 auto 15px auto;
-    /* Centraliza a imagem e adiciona espaçamento abaixo */
-}
-
-.item-resultado {
-    text-align: center;
-    /* Centraliza todo o conteúdo dentro de cada item */
-    margin: 0 auto;
-    /* Centraliza o item no contêiner pai */
-}
-
-a {
-    display: block;
-    /* Cada link ocupa uma nova linha */
-    margin: 5px 0;
-    /* Espaçamento entre os links */
-}
-
-/* Estiliza a caixa de resultados da pesquisa */
+/* Estilo para os resultados da pesquisa */
 .resultados-pesquisa {
-    width: 40rem;
-    height: 35vh;
+    width: 25rem;
+    height: 80vh;
     overflow-y: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin: auto;
     padding: 1rem;
     border-radius: 0.6rem;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra leve */
 }
 
-/* Estiliza cada item de resultado */
+/* Imagem do item de resultado */
+.imagem-resultado {
+    max-width: 150px;
+    /* Garante que a imagem não ultrapasse a largura do contêiner */
+    margin-bottom: 0.5rem;
+}
+
+/* Item de resultado */
 .item-resultado {
     background: #FFFFFF;
     border-radius: 0.6rem;
@@ -133,52 +190,73 @@ a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 1.5rem;
-    /* Tamanho da fonte */
     color: #222831;
-    /* Cor do texto */
 }
 
-/* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none;
-    /* Remove o sublinhado padrão dos links */
     color: #30475E;
-    /* Cor do texto dos links */
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
 .item-resultado a:hover {
     text-decoration: underline;
-    /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
     color: #45474B;
-    /* Cor do texto */
     margin: 0.5rem 0;
-    /* Margem acima e abaixo */
 }
 
-/* Estiliza o rodapé da página */
+/* Rodapé */
 footer {
     background-color: #F5F7F8;
-    /* Cor de fundo do rodapé */
     color: #45474B;
-    /* Cor do texto */
     text-align: center;
-    /* Alinha o texto ao centro */
-    padding: 0;
-    /* Espaçamento interno */
+    padding: 1rem;
     width: 100%;
-    /* Largura total da página */
-    position: absolute;
-    /* Posiciona o rodapé */
-    bottom: 0;
-    /* Alinha ao fundo da página */
     font-size: 1rem;
-    /* Tamanho da fonte */
+    margin-top: auto;
+}
+
+@keyframes movimentarBolha {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        top: 100%;
+        left: 0;
+    }
+
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+
+    75% {
+        top: 0;
+        left: 100%;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.bolha {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(163, 215, 252, 0.5);
+    border: 1px solid rgb(240, 236, 236);
+    border-radius: 50%;
+    animation: movimentarBolha 10s infinite;
+    pointer-events: none;
+    /* Garante que a bolha não interfere na interação do usuário */
+    z-index: 10;
+    /* Coloca a bolha acima de outros elementos */
 }

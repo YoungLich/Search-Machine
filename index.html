@@ -4,34 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="responsive.css">
-    <link rel="icon" type="image/ico" sizes="16x16" href="Icon.ico">
-    <title>MMA Kingston</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="icon.png" type="image/ico" sizes="16x16">
+    <title>Search Machine</title>
 </head>
 
 <body>
+    <div class="bolha"></div>
     <header>
         <div class="title-container">
-            <h1 class="title">MMA Kingston</h1>
-            <img src="glove_mma.png" class="img">
+            <h1 class="title">Search Machine</h1>
+            <img src="Icon.png" class="img" alt="Icon">
         </div>
     </header>
+
     <main>
-        <section class="pesquisa">
-            <input type="text" placeholder="Pesquisar">
-            <button onclick="pesquisar()">Pesquisar</button>
+        <div class="container_escolha">
+            <div class="caixinha" data-theme="games">Buscar por Games</div>
+            <div class="caixinha" data-theme="livros">Buscar por Livros</div>
+            <div class="caixinha" data-theme="receitas">Buscar por Receitas</div>
+            <div class="caixinha" data-theme="cursos">Buscar por Cursos</div>
+            <div class="caixinha" data-theme="Petshop">Buscar por Petshop</div>
+            <div class="caixinha" data-theme="Vagas">Buscar por Vagas</div>
+        </div>
+
+        <section class="pesquisa" id="pesquisa">
+            <input type="text" placeholder="O que você procura?" id="Pesquisa">
+            <button onclick="pesquisar()">Search</button>
         </section>
-        <section class="resultados-pesquisa" id="resultados-pesquisa">
-        </section>
+
+        <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
     </main>
+
     <footer>
-        <p>2024 - Copyright | MMA Kingston <br>
-            Desenvolviment by (Gabriel Proença)</p>
-        <p>Todos Direitos Reservados.</p>
+        <p>2024 - Copyright | Developer - Gabriel Proença<br>Todos Direitos Reservados.</p>
     </footer>
-    <script src="dados.js"></script>
+
     <script src="scripts.js"></script>
+    <script src="dados_receitas.js"></script>
+    <script src="dados_cursos.js"></script>
+    <script src="dados_jogos.js"></script>
+    <script src="dados_livros.js"></script>
 </body>
 
 </html>

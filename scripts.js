@@ -1,38 +1,88 @@
-function pesquisar() {
-    // Obtém o valor do campo de pesquisa
-    let input = document.querySelector('.pesquisa input').value.toLowerCase().trim();
+// Função para unificar todos os dados
+function obterTodosDados() {
+    return [...dadosLivros, ...dadosJogos, ...dadosReceitas, ...dadosCursos];
+}
 
-    // Seleciona a seção onde os resultados serão exibidos
+function pesquisar() {
+    let input = document.querySelector('.pesquisa input').value.toLowerCase().trim();
     let section = document.getElementById("resultados-pesquisa");
-    let resultados = ""; // Inicializa a string para armazenar o HTML gerado
 
     // Verifica se o campo de pesquisa está vazio
     if (input === "") {
-        section.innerHTML = "<p class='text'>Por favor, digite o nome de um lutador para pesquisar.</p>";
-        return; // Sai da função para não continuar a pesquisa
+        section.innerHTML = "<p class='text'>Por favor, digite o nome de um item para pesquisar.</p>";
+        return;
     }
 
-    // Filtra os dados com base no título (nome do lutador) correspondente ao termo pesquisado
-    let dadosFiltrados = dados.filter(dado => dado.titulo.toLowerCase().includes(input));
+    // Unificando os dados
+    let todosDados = obterTodosDados();
 
-    // Gera o HTML apenas para os dados filtrados
+    // Filtrando dados com base no título
+    let dadosFiltrados = todosDados.filter(dado => dado.titulo.toLowerCase().includes(input));
+
+    // Construindo o HTML para exibir os resultados
+    let resultadosHTML = "";
+
     if (dadosFiltrados.length > 0) {
         for (let dado of dadosFiltrados) {
-            resultados += `
+            resultadosHTML += `
                 <div class="item-resultado">
                   <h2>${dado.titulo}</h2>
-                  <p class="descricao-meta">${dado.descricao}</p>
                   ${dado.image ? `<img src="${dado.image}" alt="${dado.titulo}" class="imagem-resultado">` : ''}
-                  <a href="${dado.links[0]}" target="_blank">Mais Informações</a> 
-                  <a href="${dado.links[1]}" target="_blank">Sherdog</a>
-                  ${dado.links[2] ? `<a href="${dado.links[2]}" target="_blank">Instagram</a>` : ''}
+                  <p class="descricao-meta">${dado.descricao}</p>
+                  <a href="${dado.links[0]}" target="_blank">Mais Informações</a>
                 </div>
             `;
         }
     } else {
-        resultados = "<p>Nenhum lutador encontrado.</p>"; // Mensagem caso nenhum dado seja encontrado
+        resultadosHTML = "<p>Nenhum item encontrado.</p>";
     }
 
-    // Atualiza a seção com os resultados filtrados
-    section.innerHTML = resultados;
+    // Atualiza a seção com os resultados
+    section.innerHTML = resultadosHTML;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const escolhaContainer = document.querySelector('.container_escolha');
+    const pesquisaSection = document.getElementById('pesquisa');
+
+    escolhaContainer.addEventListener('click', (event) => {
+        const target = event.target;
+
+        if (target.classList.contains('caixinha')) {
+            const tema = target.getAttribute('data-theme');
+            alterarTema(tema);
+        }
+    });
+
+    function alterarTema(tema) {
+        const body = document.body;
+        const imagensFundo = {
+            games: 'images/backgrounds/Games.jpg',
+            livros: 'images/backgrounds/Livros.jpg',
+            receitas: 'images/backgrounds/Receitas.jpg',
+            cursos: 'images/backgrounds/Cursos.png'
+        };
+
+        // Debug: Verifica se o tema é válido
+        console.log(`Tema selecionado: ${tema}`);
+        console.log(`Imagem de fundo: ${imagensFundo[tema]}`);
+
+        // Verifica se a imagem de fundo existe e aplica
+        if (imagensFundo[tema]) {
+            body.style.backgroundImage = `url(${imagensFundo[tema]})`;
+            body.style.backgroundSize = 'cover';
+            body.style.backgroundPosition = 'center';
+            body.style.backgroundRepeat = 'no-repeat';
+        } else {
+            console.error(`Tema ${tema} não encontrado.`);
+        }
+
+        // Mostrar a barra de pesquisa
+        pesquisaSection.classList.add('search-bar-visible');
+
+        // Ocultar o container de escolha
+        escolhaContainer.style.display = 'none';
+    }
+});
+
+

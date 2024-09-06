@@ -1,67 +1,122 @@
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        /* Ajuste o tamanho da fonte para uma melhor visualização em tablets */
         letter-spacing: 0.2rem;
     }
 
     .title-container {
+        margin-top: 3rem;
+        /* Ajuste a margem superior para melhor espaçamento em tablets */
         flex-direction: column;
     }
 
-    section input {
-        width: 25rem;
-        padding: 0.8rem;
+    .container_escolha {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        /* Ajuste a altura para se adaptar ao conteúdo */
+        max-width: 90%;
+        /* Ajuste a largura máxima para se adaptar à tela */
+        padding: 10px;
+        /* Reduza o padding para tablets */
+    }
+
+    .caixinha {
+        width: 60px;
+        /* Ajuste a largura das opções */
+        font-size: 15px;
+        /* Ajuste o tamanho da fonte */
+    }
+
+    .pesquisa input {
+        width: 80%;
+        /* Ajuste a largura do input para se adaptar à tela */
+        max-width: 300px;
+        /* Defina uma largura máxima */
     }
 
     .resultados-pesquisa {
-        width: 40rem;
-        height: 40vh;
+        width: 90%;
+        height: 50vh;
+        /* Ajuste a altura para se adaptar à tela */
+        max-width: 1000px;
+        /* Ajuste a largura máxima */
     }
 
     .item-resultado h2 {
         font-size: 1.3rem;
+        /* Ajuste o tamanho da fonte do título dos resultados */
     }
 
     .img {
         width: 100px;
+        /* Ajuste a largura da imagem do título */
     }
 }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
     .title-container {
-        margin-top: 60px;
+        margin-top: 3rem;
+        /* Ajuste a margem superior para celulares */
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        /* Ajuste o tamanho da fonte para uma melhor visualização em celulares */
         letter-spacing: 0.1rem;
     }
 
-    section input {
-        width: 17rem;
+    .container_escolha {
+        grid-template-columns: 1fr;
+        /* Ajuste para uma coluna em celulares */
+        height: auto;
+        /* Ajuste a altura para se adaptar ao conteúdo */
+        max-width: 90%;
+        /* Ajuste a largura máxima para celulares */
+        padding: 20px;
+        height: 350px;
+        grid-gap: 5px;
     }
 
-    section button {
+    .caixinha {
+        width: 50px;
+        /* Ajuste a largura das opções */
+        font-size: 14px;
+        /* Ajuste o tamanho da fonte */
+    }
+
+    .pesquisa input {
+        width: 90%;
+        /* Ajuste a largura do input para se adaptar à tela */
+        max-width: 280px;
+        /* Defina uma largura máxima */
+    }
+
+    .pesquisa button {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
 
     .resultados-pesquisa {
-        width: 90%;
-        height: 50vh;
+        width: 95%;
+        height: 60vh;
+        /* Ajuste a altura para se adaptar à tela */
     }
 
     .item-resultado h2 {
         font-size: 1.1rem;
+        /* Ajuste o tamanho da fonte do título dos resultados */
     }
 
     footer {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        /* Ajuste o tamanho da fonte do rodapé */
     }
 
     .img {
-        width: 80px;
+        width: 70px;
+        /* Ajuste a largura da imagem do título */
     }
 }
