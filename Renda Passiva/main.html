@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/icon" href="coin.png">
+    <title>Calculadora de Renda Passiva</title>
+</head>
+
+<body>
+
+    <body>
+
+        <div class="container">
+            <h1>Calculadora de Renda Passiva</h1>
+
+            <label for="investment">Investimento (R$)</label>
+            <input type="number" id="investment" placeholder="Digite o valor investido">
+
+            <label for="rate">Taxa de Retorno (%)</label>
+            <input type="number" id="rate" placeholder="Digite a taxa de retorno anual">
+
+            <label for="years">Período (anos)</label>
+            <select id="years">
+                <option value="1">1 Ano</option>
+                <option value="2">2 Anos</option>
+                <option value="3">3 Anos</option>
+                <option value="5">5 Anos</option>
+                <option value="10">10 Anos</option>
+            </select>
+
+            <button onclick="calculateIncome()">Calcular Renda Passiva</button>
+
+            <div class="result">
+                Renda Passiva Total: R$ <span id="income">0.00</span>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

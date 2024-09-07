@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="Saúde.png" type="image/ico" sizes="16x16">
+    <title>Saúde e Bem-Estar</title>
+</head>
+
+<body>
+    <h1>Saúde e Bem-Estar</h1>
+    <p>Acompanhe seu consumo diário de água e calcule seu IMC!</p>
+
+    <div class="water-tracker">
+        <input type="number" id="water" placeholder="Água consumida (ml)">
+        <button onclick="addWater()">Registrar</button>
+        <h2>Total de Água Consumida: <span id="water-total">0</span> ml</h2>
+    </div>
+
+    <div class="imc-calculator">
+        <h2>Calculadora de IMC</h2>
+        <input type="number" id="height" placeholder="Altura (cm)">
+        <input type="number" id="weight" placeholder="Peso (kg)">
+        <button onclick="calculateIMC()">Calcular IMC</button>
+        <h3>Seu IMC: <span id="imc-result">0</span></h3>
+        <p id="imc-status"></p>
+    </div>
+
+    <div class="water-recommendation">
+        <h2>Recomendação de Água</h2>
+        <p>Com base no seu peso, você deve beber: <span id="water-recommendation">0</span> ml de água por dia.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

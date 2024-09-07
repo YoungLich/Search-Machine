@@ -53,6 +53,11 @@
         width: 100px;
         /* Ajuste a largura da imagem do título */
     }
+
+    .bolha {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 /* Responsividade para celulares */
@@ -76,7 +81,7 @@
         max-width: 90%;
         /* Ajuste a largura máxima para celulares */
         padding: 20px;
-        height: 350px;
+        height: 450px;
         grid-gap: 5px;
     }
 
@@ -118,5 +123,10 @@
     .img {
         width: 70px;
         /* Ajuste a largura da imagem do título */
+    }
+
+    .bolha {
+        width: 60px;
+        height: 60px;
     }
 }

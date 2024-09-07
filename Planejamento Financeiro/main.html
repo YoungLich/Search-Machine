@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="coin.png" type="image/ico" sizes="16x16">
+    <title>Planejamento Financeiro</title>
+</head>
+
+<body>
+    <h1>Planejamento Financeiro</h1>
+    <p>Gerencie suas finanças pessoais!</p>
+
+    <div class="financial-tracker">
+        <h2>Registrar Receita</h2>
+        <input type="number" id="income-amount" placeholder="Valor da Receita">
+        <input type="text" id="income-source" placeholder="Fonte da Receita">
+        <button onclick="addIncome()">Adicionar Receita</button>
+
+        <h2>Registrar Despesa</h2>
+        <input type="number" id="expense-amount" placeholder="Valor da Despesa">
+        <input type="text" id="expense-category" placeholder="Categoria da Despesa">
+        <button onclick="addExpense()">Adicionar Despesa</button>
+
+        <h2>Saldo Atual: R$ <span id="balance">0.00</span></h2>
+    </div>
+
+    <div class="expense-summary">
+        <h2>Resumo de Despesas por Categoria</h2>
+        <ul id="expense-list"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

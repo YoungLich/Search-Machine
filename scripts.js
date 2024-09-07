@@ -1,6 +1,6 @@
 // Função para unificar todos os dados
 function obterTodosDados() {
-    return [...dadosLivros, ...dadosJogos, ...dadosReceitas, ...dadosCursos];
+    return [...dadosLivros, ...dadosJogos, ...dadosReceitas, ...dadosCursos, ...dadosVagas, ...dadosPets];
 }
 
 function pesquisar() {
@@ -44,6 +44,7 @@ function pesquisar() {
 document.addEventListener('DOMContentLoaded', () => {
     const escolhaContainer = document.querySelector('.container_escolha');
     const pesquisaSection = document.getElementById('pesquisa');
+    const topicosDiv = document.getElementById('topicos'); // Adiciona referência à div.topicos
 
     escolhaContainer.addEventListener('click', (event) => {
         const target = event.target;
@@ -60,7 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             games: 'images/backgrounds/Games.jpg',
             livros: 'images/backgrounds/Livros.jpg',
             receitas: 'images/backgrounds/Receitas.jpg',
-            cursos: 'images/backgrounds/Cursos.png'
+            cursos: 'images/backgrounds/Cursos.png',
+            vagas: 'images/backgrounds/Trabalho.png',
+            petshop: 'images/backgrounds/pet.jpg',
         };
 
         // Debug: Verifica se o tema é válido
@@ -82,6 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ocultar o container de escolha
         escolhaContainer.style.display = 'none';
+
+        // Ocultar a div.topicos
+        if (topicosDiv) {
+            topicosDiv.style.display = 'none';
+        }
     }
 });
 

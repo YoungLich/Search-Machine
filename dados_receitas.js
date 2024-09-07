@@ -18,7 +18,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Misture todos os ingredientes, despeje em uma forma untada e asse por 30 minutos a 180°C.</li>
             </ul>
         `,
-        image: 'images/Receitas/bolo-de-chocolate.jpg',
+        image: '../Search Machine/images/Receitas/bolo-de-chocolate.jpg',
         links: ["https://bakeandcakegourmet.com.br/receitas/bolo-de-chocolate-facil-e-barato"]
     },
     {
@@ -35,7 +35,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Misture todos os ingredientes até formar uma massa homogênea, molde em bolinhas e asse por 20 minutos a 200°C.</li>
             </ul>
         `,
-        image: 'images/Receitas/pao-de-queijo.jpg',
+        image: '../Search Machine/images/Receitas/pao-de-queijo.jpg',
         links: ["https://vovopalmirinha.com.br/pao-de-queijo/"]
     },
     {
@@ -52,7 +52,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Bata as gemas com o açúcar, adicione o mascarpone e misture. Mergulhe os biscoitos no café e faça camadas com o creme. Leve à geladeira por 4 horas.</li>
             </ul>
         `,
-        image: 'images/Receitas/tiramisu.png',
+        image: '../Search Machine/images/Receitas/tiramisu.png',
         links: ["https://www.terra.com.br/vida-e-estilo/degusta/receitas/tiramisu-aprenda-a-fazer-5-versoes-da-popular-sobremesa-italiana,0469478120f459c8975032243353bb27hhzwk24k.html"]
     },
     {
@@ -69,7 +69,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Refogue a carne seca com cebola e alho, faça um purê com a mandioca e leite. Em um refratário, faça camadas de carne e purê. Cubra com queijo e asse por 25 minutos a 200°C.</li>
             </ul>
         `,
-        image: 'images/Receitas/escondidinho.jpg',
+        image: '../Search Machine/images/Receitas/escondidinho.jpg',
         links: ["https://www.saboresajinomoto.com.br/receita/escondidinho-com-carne-seca"]
     },
     {
@@ -84,7 +84,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Cozinhe o leite condensado, manteiga e cacau em uma panela, mexendo até desgrudar do fundo. Deixe esfriar, modele em bolinhas e passe no granulado.</li>
             </ul>
         `,
-        image: 'images/Receitas/Brigadeiro.jpg',
+        image: '../Search Machine/images/Receitas/Brigadeiro.jpg',
         links: ["https://www.grupopq.com.br/receita/brigadeiro-com-amido/"]
     },
     {
@@ -101,7 +101,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Cozinhe o frango com cebola e alho, faça a massa com farinha e água, modele em formato de coxinha, passe na farinha de rosca e frite até dourar.</li>
             </ul>
         `,
-        image: 'images/Receitas/Coxinha.jpg',
+        image: '../Search Machine/images/Receitas/Coxinha.jpg',
         links: ["https://www.comidaereceitas.com.br/salgados/coxinha-de-carne-seca.html#google_vignette"]
     },
     {
@@ -118,7 +118,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Misture o biscoito com a manteiga e forre o fundo de uma forma. Bata o cream cheese com açúcar e ovos, despeje sobre a base e asse por 45 minutos a 160°C. Cubra com frutas vermelhas antes de servir.</li>
             </ul>
         `,
-        image: 'images/Receitas/Cheesecake.jpg',
+        image: '../Search Machine/images/Receitas/Cheesecake.jpg',
         links: ["https://www.sabornamesa.com.br/receitas-de-sobremesas/cheesecake-de-frutas-vermelhas"]
     },
     {
@@ -135,7 +135,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Cozinhe o feijão com as carnes, cebola e alho até que tudo esteja bem temperado e macio. Sirva com arroz, couve e laranja.</li>
             </ul>
         `,
-        image: 'images/Receitas/Feijoada.png',
+        image: '../Search Machine/images/Receitas/Feijoada.png',
         links: ["https://www.receitadevovo.com.br/receitas/feijoada"]
     },
     {
@@ -150,7 +150,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Faça um caramelo com o açúcar e despeje em uma forma. Bata o leite condensado, leite e ovos, e despeje sobre o caramelo. Asse em banho-maria por 1 hora a 180°C.</li>
             </ul>
         `,
-        image: 'images/Receitas/Pudim.jpg',
+        image: '../Search Machine/images/Receitas/Pudim.jpg',
         links: ["https://www.mococa.com.br/receita/receita-de-pudim/"]
     },
     {
@@ -166,7 +166,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Faça um creme com leite condensado, leite e chocolate. Alterne camadas de creme e biscoitos em um refratário e leve à geladeira por 4 horas.</li>
             </ul>
         `,
-        image: 'images/Receitas/Pave.png',
+        image: '../Search Machine/images/Receitas/Pave.png',
         links: ["https://receitas.globo.com/tipos-de-prato/doces-e-sobremesas/pave-de-chocolate-517dc0564d09386759000046.ghtml"]
     },
     {
@@ -181,7 +181,7 @@ let dadosReceitas = [
                 <li>Modo de preparo: Dissolva a gelatina no suco de maracujá e misture com leite condensado e creme de leite. Coloque em um recipiente e leve à geladeira até firmar.</li>
             </ul>
         `,
-        image: 'images/Receitas/mousse.jpg',
+        image: '../Search Machine/images/Receitas/mousse.jpg',
         links: ["https://www.tudogostoso.com.br/receita/544-mousse-de-maracuja.html"]
     },
 ];

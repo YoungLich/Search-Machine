@@ -220,43 +220,72 @@ footer {
     margin-top: auto;
 }
 
-@keyframes movimentarBolha {
-    0% {
-        top: 0;
-        left: 0;
-    }
-
-    25% {
-        top: 100%;
-        left: 0;
-    }
-
-    50% {
-        top: 100%;
-        left: 100%;
-    }
-
-    75% {
-        top: 0;
-        left: 100%;
-    }
-
-    100% {
-        top: 0;
-        left: 0;
-    }
-}
-
 .bolha {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    background-color: rgba(163, 215, 252, 0.5);
-    border: 1px solid rgb(240, 236, 236);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(163, 215, 252, 0.7);
+    border: 1px solid rgba(240, 236, 236, 0.3);
     border-radius: 50%;
-    animation: movimentarBolha 10s infinite;
+    animation: movimentarBolha 10s infinite, brilhoBolha 2s infinite;
     pointer-events: none;
     /* Garante que a bolha não interfere na interação do usuário */
     z-index: 10;
     /* Coloca a bolha acima de outros elementos */
+    box-shadow: 0 0 10px rgba(163, 215, 252, 0.5);
+    /* Adiciona um efeito de brilho */
+}
+
+@keyframes movimentarBolha {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes brilhoBolha {
+    0% {
+        background-color: rgba(163, 215, 252, 0.7);
+        box-shadow: 0 0 10px rgba(163, 215, 252, 0.5);
+    }
+
+    50% {
+        background-color: transparent;
+        box-shadow: 0 0 20px rgba(194, 226, 248, 0.7);
+    }
+
+    100% {
+        background-color: rgba(163, 215, 252, 0.7);
+        box-shadow: 0 0 10px rgba(163, 215, 252, 0.5);
+    }
+}
+
+#topicos {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.subtitle {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.img-renda,
+.img-saude {
+    width: 100px;
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    margin: 0 auto;
+    /* Centraliza as imagens dentro dos links */
 }

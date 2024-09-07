@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #cec0c0, #dbb2be);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #bd1010;
+}
+
+input,
+button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #e08484;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ee2828;
+}
+
+h2 {
+    color: #333;
+}
+
+.water-tracker,
+.imc-calculator,
+.water-recommendation {
+    margin: 20px 0;
+}
+
+#imc-status {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+#imc-status.obesity {
+    color: red;
+}
